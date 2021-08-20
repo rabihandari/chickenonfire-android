@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout19"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar8"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar8">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/order_your_food_online_from"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView7"
+            app:layout_constraintStart_toStartOf="@+id/cardView7"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/logo" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView10"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/general_location_setlocation_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:focusable="false"
+        android:textAlignment="viewStart"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="@string/set_your_delivery_location"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
+
+    <Button
+        android:id="@+id/general_location_showmenu_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/full_colored_button"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/show_menu"
+        android:stateListAnimator="@null"
+        android:onClick="showMenu"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintStart_toStartOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/general_location_setlocation_edittext" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintTop_toTopOf="@+id/general_location_setlocation_edittext"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

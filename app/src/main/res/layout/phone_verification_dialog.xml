@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout35"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/phone_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/verify_mobile_number"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phone_dialog_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="+961 000000"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/phone_dialog_title"
+        app:layout_constraintTop_toBottomOf="@+id/phone_dialog_title" />
+
+    <TextView
+        android:id="@+id/phone_dialog_change_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="8dp"
+        android:text="@string/change"
+        android:textColor="@color/colorAccent"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_dialog_phonenumber"
+        app:layout_constraintStart_toEndOf="@+id/phone_dialog_phonenumber"
+        app:layout_constraintTop_toTopOf="@+id/phone_dialog_phonenumber" />
+
+    <TextView
+        android:id="@+id/phone_verification_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/we_will_send_you_an_sms_with_the_verification_code_on_the_number_above"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/phone_dialog_phonenumber"
+        app:layout_constraintTop_toBottomOf="@+id/phone_dialog_phonenumber" />
+
+    <TextView
+        android:id="@+id/phone_verification_getcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="8dp"
+        android:text="@string/get_code"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/phone_verification_body"
+        app:layout_constraintTop_toBottomOf="@+id/phone_verification_body" />
+
+    <TextView
+        android:id="@+id/phone_verification_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="8dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_verification_getcode"
+        app:layout_constraintEnd_toStartOf="@+id/phone_verification_getcode"
+        app:layout_constraintTop_toTopOf="@+id/phone_verification_getcode" />
+
+    <ProgressBar
+        android:id="@+id/phone_verification_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

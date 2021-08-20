@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zeappa.chickenonfire">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <application
+        android:name=".RestaurantApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".GeneralArea" />
+        <activity android:name=".GeneralAreaMap" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ItemOrderActivity"
+            android:screenOrientation="portrait"
+            android:isScrollContainer="true"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name=".BasketActivity" />
+        <activity android:name=".GetLocationActivity" />
+        <activity android:name=".AddAddressActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".RestaurantInfoActivity" />
+        <activity android:name=".CheckoutActivity" />
+        <activity android:name=".SelectAddressActivity" />
+        <activity android:name=".NoInternetActivity" />
+        <activity android:name=".SignInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignInWithEmailActivity" />
+        <activity android:name=".ForgottenPasswordActivity" />
+        <activity android:name=".ReviewsActivity" />
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".FavouritesActivity" />
+        <activity android:name=".AddReviewActivity" />
+        <activity android:name=".LanguageActivity" />
+        <activity android:name=".tools.KnetWebView" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+
+</manifest>

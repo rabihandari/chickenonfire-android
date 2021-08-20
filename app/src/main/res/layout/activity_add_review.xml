@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout34"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/add_review_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_review_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/add_review"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_review_toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/add_review_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_review_backarrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:onClick="GoBack"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/add_review_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <com.zeappa.chickenonfire.tools.CustomViewPager
+        android:id="@+id/add_review_pager"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_review_toolbar" >
+
+    </com.zeappa.chickenonfire.tools.CustomViewPager>
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/leave_comment"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_review_pager" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/your_feedback_is_important_let_us_know_your_thoughts_suggestions_or_if_there_is_anything_you_didn_t_like_in_chicken_on_fire"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <EditText
+        android:id="@+id/add_review_comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/type_here"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/myFontColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView35"
+        app:layout_constraintStart_toStartOf="@+id/textView35"
+        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+    <Button
+        android:id="@+id/add_review_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/full_colored_button"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/submit_review"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:stateListAnimator="@null"
+        android:textSize="13sp"
+        android:onClick="submitReview"
+        app:layout_constraintEnd_toEndOf="@+id/add_review_comment"
+        app:layout_constraintStart_toStartOf="@+id/add_review_comment"
+        app:layout_constraintTop_toBottomOf="@+id/add_review_comment" />
+
+    <ProgressBar
+        android:id="@+id/add_review_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/add_review_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_review_toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

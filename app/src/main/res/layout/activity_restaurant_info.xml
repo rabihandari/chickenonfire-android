@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/restaurant_info_backarrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow"
+        android:onClick="GoBack"/>
+
+    <TextView
+        android:id="@+id/restaurant_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/restaurant_info"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/restaurant_info_cover" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_deliverytime_text"
+                app:srcCompat="@color/ligtergrey" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+                app:layout_constraintEnd_toEndOf="@+id/cardView3"
+                app:layout_constraintStart_toStartOf="@+id/cardView3"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/logo" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/restaurant_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView4"
+                app:layout_constraintStart_toStartOf="@+id/cardView4"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+            <TextView
+                android:id="@+id/restaurant_info_deliverytime_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/delivery_time_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurant_info_deliverytime_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/restaurant_info_deliverytime_text" />
+
+            <TextView
+                android:id="@+id/restaurant_info_minimumorder_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/minimum_order_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_deliverytime_value"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/restaurant_info_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_description"
+                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_name"
+                app:layout_constraintStart_toStartOf="@+id/restaurant_info_name"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_name" />
+
+            <TextView
+                android:id="@+id/restaurant_info_deliverytime_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="46dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/delivery_time"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_desc" />
+
+            <TextView
+                android:id="@+id/restaurant_info_minimumorder_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/minimum_order_text"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/restaurant_info_deliverytime_text"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <ImageView
+                android:id="@+id/divider5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_minimumorder_text"
+                app:srcCompat="@color/ligtergrey" />
+
+            <TextView
+                android:id="@+id/restuarant_info_servicecharge_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/service_charge_text"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/restaurant_info_minimumorder_text"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <TextView
+                android:id="@+id/restaurant_info_servicecharge_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/service_charge_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_minimumorder_value"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <ImageView
+                android:id="@+id/divider6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restuarant_info_servicecharge_text"
+                app:srcCompat="@color/ligtergrey" />
+
+            <TextView
+                android:id="@+id/restuarant_info_preorder_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pre_order_text"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/restaurant_info_minimumorder_text"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/restaurant_info_preorder_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pre_order_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_minimumorder_value"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <ImageView
+                android:id="@+id/divider7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restuarant_info_preorder_text"
+                app:srcCompat="@color/ligtergrey" />
+
+            <TextView
+                android:id="@+id/restaurant_info_area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/restaurant_area_text"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/restuarant_info_preorder_text"
+                app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+            <TextView
+                android:id="@+id/restaurant_info_area_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/restaurant_area_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_preorder_value"
+                app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+            <ImageView
+                android:id="@+id/divider8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_area_text"
+                app:srcCompat="@color/ligtergrey" />
+
+            <TextView
+                android:id="@+id/restaurant_info_openinghours_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/opening_hours"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/restaurant_info_area_text"
+                app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+            <TextView
+                android:id="@+id/monday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/monday_text"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/restaurant_info_openinghours_text"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_openinghours_text" />
+
+            <TextView
+                android:id="@+id/moday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/monday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_area_value"
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_openinghours_text" />
+
+            <TextView
+                android:id="@+id/tuesday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/tuesday"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/monday_text"
+                app:layout_constraintTop_toBottomOf="@+id/monday_text" />
+
+            <TextView
+                android:id="@+id/tuesday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/tuesday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/moday_value"
+                app:layout_constraintTop_toTopOf="@+id/tuesday_text" />
+
+            <TextView
+                android:id="@+id/wednesday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/wednesday"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/tuesday_text"
+                app:layout_constraintTop_toBottomOf="@+id/tuesday_text" />
+
+            <TextView
+                android:id="@+id/wednesday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/wednesday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/tuesday_value"
+                app:layout_constraintTop_toBottomOf="@+id/tuesday_value" />
+
+            <TextView
+                android:id="@+id/thursday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/thursday"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/wednesday_text"
+                app:layout_constraintTop_toBottomOf="@+id/wednesday_text" />
+
+            <TextView
+                android:id="@+id/thursday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/thursday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/wednesday_value"
+                app:layout_constraintTop_toBottomOf="@+id/wednesday_text" />
+
+            <TextView
+                android:id="@+id/friday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/friday"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/wednesday_text"
+                app:layout_constraintTop_toBottomOf="@+id/thursday_text" />
+
+            <TextView
+                android:id="@+id/friday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/friday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/thursday_value"
+                app:layout_constraintTop_toBottomOf="@+id/thursday_text" />
+
+            <TextView
+                android:id="@+id/saturday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/saturday"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/friday_text"
+                app:layout_constraintTop_toBottomOf="@+id/friday_text" />
+
+            <TextView
+                android:id="@+id/saturday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/saturday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/friday_value"
+                app:layout_constraintTop_toTopOf="@+id/saturday_text" />
+
+            <TextView
+                android:id="@+id/sunday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/sunday"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/saturday_text"
+                app:layout_constraintTop_toBottomOf="@+id/saturday_text" />
+
+            <TextView
+                android:id="@+id/sunday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/sunday_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/saturday_value"
+                app:layout_constraintTop_toTopOf="@+id/sunday_text" />
+
+            <ImageView
+                android:id="@+id/divider9"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sunday_text"
+                app:srcCompat="@color/ligtergrey" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/payment_options"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/divider10"
+                app:layout_constraintStart_toStartOf="@+id/sunday_text"
+                app:layout_constraintTop_toBottomOf="@+id/divider9" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider9">
+
+                <ImageView
+                    android:id="@+id/ic_knet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_cashondelivery"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_knet" />
+
+                <ImageView
+                    android:id="@+id/ic_cashondelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_creditcard"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_cashondelivery" />
+
+                <TextView
+                    android:id="@+id/credit_card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/credit_card"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_creditcard"
+                    app:layout_constraintStart_toStartOf="@+id/ic_creditcard"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_creditcard" />
+
+                <ImageView
+                    android:id="@+id/ic_creditcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_creditcard" />
+
+                <TextView
+                    android:id="@+id/cash_on_delivery_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/cash_on_delivery"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_cashondelivery"
+                    app:layout_constraintStart_toStartOf="@+id/ic_cashondelivery"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_cashondelivery" />
+
+                <TextView
+                    android:id="@+id/knet_text"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/knet"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_knet"
+                    app:layout_constraintStart_toStartOf="@+id/ic_knet"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_knet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/divider10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccentLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+                app:srcCompat="@color/ligtergrey" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/location"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/divider10" />
+
+            <TextView
+                android:id="@+id/location_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/restaurant_area_value"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/sunday_value"
+                app:layout_constraintTop_toTopOf="@+id/location_text" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location_text" />
+
+            <TextView
+                android:id="@+id/get_directions_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="24dp"
+                android:text="@string/get_directions"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapView"
+                android:onClick="getDirections"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

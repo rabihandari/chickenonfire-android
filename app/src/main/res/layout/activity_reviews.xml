@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout24"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".ReviewsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviews_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reviews_rating_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/very_good"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/reviews_based_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="based on 3 reviews"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/reviews_rating_text_value"
+                app:layout_constraintTop_toBottomOf="@+id/reviews_rating_text_value" />
+
+            <ImageView
+                android:id="@+id/reviews_face_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/reviews_rating_text_value"
+                app:layout_constraintEnd_toStartOf="@+id/reviews_rating_text_value"
+                app:layout_constraintTop_toTopOf="@+id/reviews_rating_text_value"
+                app:srcCompat="@drawable/excellent_face_icon" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reviews_based_on">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/order_packaging"
+                    android:textColor="@android:color/black" />
+
+                <RatingBar
+                    android:id="@+id/order_pacakaging_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:foregroundGravity="center"
+                    android:progressTint="#FF9800"
+                    android:rating="5" />
+
+                <TextView
+                    android:id="@+id/order_packaging_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="5.0"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout26">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/value_for_money"
+                    android:textColor="@android:color/black" />
+
+                <RatingBar
+                    android:id="@+id/value_formoney_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="0"
+                    android:progressTint="#FF9800"
+                    android:rating="4" />
+
+                <TextView
+                    android:id="@+id/value_formoney_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="4.0"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout30"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout26"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout26"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout29">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/delivery_time"
+                    android:textColor="@android:color/black" />
+
+                <RatingBar
+                    android:id="@+id/delivery_time_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="0"
+                    android:progressTint="#FF9800"
+                    android:rating="5" />
+
+                <TextView
+                    android:id="@+id/delivery_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/roboto"
+                    android:text="5.0"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout31"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout26"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout26"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout30">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/quality_of_food"
+                    android:textColor="@android:color/black" />
+
+                <RatingBar
+                    android:id="@+id/quality_offood_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="0"
+                    android:progressTint="#FF9800"
+                    android:rating="3.5" />
+
+                <TextView
+                    android:id="@+id/quality_offood_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/roboto"
+                    android:text="3.5"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviews_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout31" />
+
+            <ProgressBar
+                android:id="@+id/reviews_progressbar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:layout_constraintBottom_toBottomOf="@+id/reviews_recyclerview"
+                app:layout_constraintEnd_toEndOf="@+id/reviews_recyclerview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/reviews_recyclerview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/reviews_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reviews_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/ratings_amp_reviews"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/reviews_toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/reviews_toolbar"
+        app:layout_constraintStart_toStartOf="@+id/reviews_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/reviews_backarrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:onClick="GoBack"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintStart_toStartOf="@+id/reviews_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <ImageView
+        android:id="@+id/reviews_addreview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:onClick="addReview"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="@+id/reviews_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

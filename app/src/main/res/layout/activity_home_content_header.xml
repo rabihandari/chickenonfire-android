@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/homeImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="1dp"
+        app:sliderIndicatorSelectedColor="@color/colorAccent"
+        app:sliderIndicatorUnselectedColor="#D8D8D8"
+        app:sliderScrollTimeInSec="1"
+        app:sliderStartAutoCycle="true" />
+
+    <ImageView
+        android:id="@+id/closingScrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/homeImageSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/closingScrim" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/closed"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/homeImageSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/header_burgerbutton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:onClick="openDrawer"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burger_button_white" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="searchMenu"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search_button_white" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeImageSlider" />
+
+    <TextView
+        android:id="@+id/restaurant_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/myFontColor"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="@+id/restaurant_name"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_name" />
+
+    <TextView
+        android:id="@+id/info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:onClick="restaurantInfo"
+        android:padding="10dp"
+        android:text="@string/info"
+        android:textColor="@color/colorAccent"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/restaurant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/restaurant_name" />
+
+    <ImageView
+        android:id="@+id/ic_good_face"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/good_face_icon"
+        app:layout_constraintStart_toStartOf="@+id/restaurant_desc"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_desc" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/amazing"
+        android:textColor="@android:color/black"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_good_face"
+        app:layout_constraintStart_toEndOf="@+id/ic_good_face"
+        app:layout_constraintTop_toTopOf="@+id/ic_good_face" />
+
+    <TextView
+        android:id="@+id/rating_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="based on (1) reviews"
+        android:textColor="@color/myFontColor"
+        app:layout_constraintBottom_toBottomOf="@+id/rating"
+        app:layout_constraintStart_toEndOf="@+id/rating"
+        app:layout_constraintTop_toTopOf="@+id/rating" />
+
+    <ProgressBar
+        android:id="@+id/hone_rating_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_count"
+        app:layout_constraintStart_toEndOf="@+id/rating_count"
+        app:layout_constraintTop_toTopOf="@+id/rating_count" />
+
+    <TextView
+        android:id="@+id/reviews_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openReviews"
+        android:padding="10dp"
+        android:text="@string/reviews"
+        android:textColor="@color/colorAccent"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/rating"
+        app:layout_constraintEnd_toEndOf="@+id/info_button"
+        app:layout_constraintTop_toTopOf="@+id/rating" />
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/ligtergrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+    <ImageView
+        android:id="@+id/ic_motorcycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/motorcycle_icon"
+        app:layout_constraintStart_toStartOf="@+id/ic_good_face"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/within"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_motorcycle"
+        app:layout_constraintStart_toStartOf="@+id/rating"
+        app:layout_constraintTop_toTopOf="@+id/ic_motorcycle" />
+
+    <TextView
+        android:id="@+id/delivery_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="30"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_motorcycle"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/ic_motorcycle" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/min"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/delivery_time"
+        app:layout_constraintStart_toEndOf="@+id/delivery_time"
+        app:layout_constraintTop_toTopOf="@+id/delivery_time" />
+
+    <TextView
+        android:id="@+id/delivery_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/delivery_price"
+        android:textColor="@color/myFontColor"
+        app:layout_constraintBottom_toBottomOf="@+id/delivery_time"
+        app:layout_constraintStart_toEndOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/delivery_time" />
+
+    <ImageView
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/ligtergrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_time" />
+
+    <ImageView
+        android:id="@+id/ic_promotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="@+id/ic_motorcycle"
+        app:layout_constraintStart_toStartOf="@+id/ic_motorcycle"
+        app:layout_constraintTop_toTopOf="@+id/promotion_value"
+        app:srcCompat="@drawable/ic_promotion" />
+
+    <TextView
+        android:id="@+id/promotion_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/no_offers_availalbe"
+        android:textColor="@color/colorAccentLight"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/last_order_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promotion_value">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/last_order_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/last_order_text">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/last_order_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/last_order"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/rate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/reorder_button"
+            app:layout_constraintStart_toEndOf="@+id/reorder_button"
+            app:layout_constraintTop_toBottomOf="@+id/last_order_recyclerview"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/amazing_red_face_icon" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/rate"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reorder_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/last_order_recyclerview">
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_reorder" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/re_order"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dismiss_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="openReviews"
+            android:padding="10dp"
+            android:text="@string/dismiss"
+            android:textColor="@color/colorAccent"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/last_order_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/last_order_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

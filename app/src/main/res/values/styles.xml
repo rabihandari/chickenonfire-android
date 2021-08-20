@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:listDivider">@android:color/transparent</item>
+
+    </style>
+
+    <style name="Theme.SwitchDateTime" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#29b6f6</item>
+        <item name="colorPrimaryDark">#03a9f4</item>
+        <item name="android:textColorPrimaryInverse">@color/colorAccent</item>
+        <item name="android:textColorSecondaryInverse">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.SwitchDateTime.HeaderBackground">
+        <item name="android:background">?attr/colorAccent</item>
+    </style>
+
+    <style name="Theme.SwitchDateTime.TitleDateTimeLabelText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.SwitchDateTime.Time">
+        <item name="timeCircleColor">#FAFAFA</item>
+        <item name="timeCenterColor">?attr/colorPrimary</item>
+        <item name="timeAmPmBackgroundColor">@android:color/white</item>
+        <item name="timeAmPmSelectBackgroundColor">?attr/colorAccent</item> <!-- Alpha is apply-->
+        <item name="timeAmPmTextColor">#494949</item>
+        <item name="timeSelectorColor">?attr/colorAccent</item>
+        <item name="timeCircularNumbersColor">#494949</item>
+    </style>
+
+    <!-- Year Selected-->
+    <style name="Theme.SwitchDateTime.Year">
+        <item name="colorCircleIndicator">?attr/colorAccent</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+
+
+
+    <style name="Theme.SwitchDateTime.Date">
+        <item name="mcv_selectionColor">?attr/colorAccent</item>
+    </style>
+
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="instagramText">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+    <style name="facebookText">
+        <item name="android:textColor">#0600FA</item>
+    </style>
+    <style name="twitterText">
+        <item name="android:textColor">#00ACED</item>
+    </style>
+
+</resources>

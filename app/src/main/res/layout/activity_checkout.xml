@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout13"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/checkout"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/checkout_backarrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:onClick="GoBack"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <ProgressBar
+        android:id="@+id/checkout_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="editAddress"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/mapView3"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ic_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/mapView3"
+                        app:layout_constraintTop_toBottomOf="@+id/mapView3"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/checkout_change_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:onClick="changeAddress"
+                        android:padding="16dp"
+                        android:text="@string/change"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mapView3" />
+
+                    <TextView
+                        android:id="@+id/checkout_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/area"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@+id/ic_location"
+                        app:layout_constraintTop_toTopOf="@+id/ic_location" />
+
+                    <TextView
+                        android:id="@+id/checkout_block_street_building_floor_apartmentno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Block 2, Mubarak Al Kabeer"
+                        android:textColor="@color/myFontColor"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toStartOf="@+id/checkout_change_button"
+                        app:layout_constraintStart_toStartOf="@+id/checkout_area"
+                        app:layout_constraintTop_toBottomOf="@+id/checkout_area" />
+
+                    <TextView
+                        android:id="@+id/checkout_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="Mobile: +961 70451879"
+                        android:textColor="@color/myFontColor"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/checkout_block_street_building_floor_apartmentno"
+                        app:layout_constraintTop_toBottomOf="@+id/checkout_block_street_building_floor_apartmentno" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView5"
+                app:layout_constraintStart_toStartOf="@+id/cardView5"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ic_motorcycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/motorcycle_icon" />
+
+                    <TextView
+                        android:id="@+id/order_now_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/order_now"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@+id/ic_motorcycle"
+                        app:layout_constraintTop_toTopOf="@+id/ic_motorcycle" />
+
+                    <TextView
+                        android:id="@+id/schedule_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="13-07-2020 11:30"
+                        android:textColor="@color/myFontColor"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/checkout_schedule_button"
+                        app:layout_constraintStart_toStartOf="@+id/order_now_text"
+                        app:layout_constraintTop_toBottomOf="@+id/order_now_text" />
+
+                    <TextView
+                        android:id="@+id/checkout_schedule_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:onClick="openSchedule"
+                        android:padding="16dp"
+                        android:text="@string/schedule"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/schedule_progressbar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/your_order_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/your_order"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/cardView6"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/checkout_order_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/your_order_text">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/ligtergrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkout_order_recyclerview"
+                app:srcCompat="@color/ligtergrey" />
+
+            <CheckBox
+                android:id="@+id/no_cultery_checkBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                app:layout_constraintStart_toStartOf="@+id/cardView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/no_cultery_checkBox"
+                app:layout_constraintStart_toStartOf="@+id/no_cultery_checkBox"
+                app:layout_constraintTop_toTopOf="@+id/no_cultery_checkBox">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/no_cultery"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/our_planet_prefers_less_plastic"
+                    android:textColor="@color/myFontColor"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/ligtergrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkout_order_recyclerview"
+                app:srcCompat="@color/ligtergrey" />
+
+            <CheckBox
+                android:id="@+id/leave_order_checkbox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                app:layout_constraintStart_toStartOf="@+id/cardView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/leave_order_checkbox"
+                app:layout_constraintStart_toStartOf="@+id/no_cultery_checkBox"
+                app:layout_constraintTop_toTopOf="@+id/leave_order_checkbox">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Leave Order at the Door"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave your order at the door to protect yourself"
+                    android:textColor="@color/myFontColor"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/ligtergrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_cultery_checkBox"
+                app:srcCompat="@color/ligtergrey" />
+
+            <ImageView
+                android:id="@+id/ic_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@+id/no_cultery_checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/leave_order_checkbox"
+                app:srcCompat="@drawable/ic_message" />
+
+            <TextView
+                android:id="@+id/order_special_request_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/order_special_request_optional"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@+id/ic_message" />
+
+            <EditText
+                android:id="@+id/special_request_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/input_delivery_note_here"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/order_special_request_text"
+                app:layout_constraintTop_toBottomOf="@+id/order_special_request_text" />
+
+            <TextView
+                android:id="@+id/pay_with_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/pay_with"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/your_order_text"
+                app:layout_constraintTop_toBottomOf="@+id/special_request_edittext" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cash_layout"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/knet_layout">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/cash_on_delivery"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_cash"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ic_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_cashondelivery" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/knet_layout"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/credit_card_layout">
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/knet"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_knet"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ic_knet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_knet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/credit_card_layout"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/payment_radiogroup">
+
+                <ImageView
+                    android:id="@+id/ic_creditcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_creditcard" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/credit_card"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_creditcard"
+                    app:layout_constraintStart_toEndOf="@+id/ic_creditcard"
+                    app:layout_constraintTop_toTopOf="@+id/ic_creditcard" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RadioGroup
+                android:id="@+id/payment_radiogroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/no_cultery_checkBox"
+                app:layout_constraintStart_toStartOf="@+id/no_cultery_checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/pay_with_text">
+
+                <RadioButton
+                    android:id="@+id/creditcard_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_rounded_corners2"
+                    android:padding="20dp" />
+
+                <RadioButton
+                    android:id="@+id/knet_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_rounded_corners2"
+                    android:padding="20dp" />
+
+                <RadioButton
+                    android:id="@+id/cash_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_rounded_corners2"
+                    android:padding="20dp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/payment_summary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/payment_summary"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/pay_with_text"
+                app:layout_constraintTop_toBottomOf="@+id/payment_radiogroup" />
+
+            <TextView
+                android:id="@+id/subtotal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/subtotal"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/payment_summary_text"
+                app:layout_constraintTop_toBottomOf="@+id/payment_summary_text" />
+
+            <TextView
+                android:id="@+id/subtotal_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="KD 3.000"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_summary_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/voucher_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccentLightest"
+                android:onClick="viewVoucherCard"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/subtotal_text">
+
+                <ImageView
+                    android:id="@+id/ic_voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:tint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_promotion" />
+
+                <TextView
+                    android:id="@+id/voucher_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="- KD 0.50"
+                    android:textColor="@android:color/black"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/voucher_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/use_voucher"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_voucher"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/service_charge_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/service_charge_text"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/payment_summary_text"
+                app:layout_constraintTop_toBottomOf="@+id/voucher_layout" />
+
+            <TextView
+                android:id="@+id/service_charge_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="KD 1.000"
+                android:textColor="@android:color/black"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/subtotal_value"
+                app:layout_constraintTop_toBottomOf="@+id/voucher_layout" />
+
+            <ProgressBar
+                android:id="@+id/checkout_servicefee_progressbar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/service_charge_value"
+                app:layout_constraintEnd_toStartOf="@+id/service_charge_value"
+                app:layout_constraintTop_toTopOf="@+id/service_charge_value" />
+
+            <TextView
+                android:id="@+id/total_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/total_amount"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/payment_summary_text"
+                app:layout_constraintTop_toBottomOf="@+id/service_charge_text" />
+
+            <TextView
+                android:id="@+id/total_amount_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="KD 1.000"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/service_charge_value"
+                app:layout_constraintTop_toBottomOf="@+id/service_charge_value" />
+
+
+            <Button
+                android:id="@+id/place_order_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/full_colored_button"
+                android:onClick="placeOrder"
+                android:text="@string/place_order"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:stateListAnimator="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total_amount_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

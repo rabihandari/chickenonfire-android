@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item android:id="@+id/sign_in"
+            android:icon="@drawable/ic_login"
+            android:title="@string/sign_in" />
+
+        <item android:id="@+id/favourites"
+            android:icon="@drawable/ic_favourites"
+            android:title="@string/favourites" />
+
+        <item android:id="@+id/share_app"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share" />
+
+        <item android:id="@+id/website"
+            android:icon="@drawable/ic_website"
+            android:title="@string/visit_website" />
+
+    <item android:id="@+id/language"
+        android:icon="@drawable/ic_language"
+        android:title="@string/language" />
+
+    <item android:title="@string/social_media">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/facebook"
+                    android:icon="@drawable/ic_facebook"
+                    android:title="@string/facebook" />
+                <item
+                    android:id="@+id/instagram"
+                    android:icon="@drawable/ic_instagram"
+                    android:title="@string/instagram" />
+                <item
+                    android:id="@+id/twitter"
+                    android:icon="@drawable/ic_twitter"
+                    android:title="@string/twitter" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/contact_us">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/dial"
+                    android:icon="@drawable/ic_dial"
+                    android:title="@string/dial" />
+                <item
+                    android:id="@+id/message_us"
+                    android:icon="@drawable/ic_contact_message"
+                    android:title="@string/email" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/other">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/our_digital_experts"
+                    android:title="@string/our_digital_experts" />
+                <item
+                    android:id="@+id/privacy_policy"
+                    android:title="@string/privacy_policy" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,266 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">Chicken On Fire</string>
+    <string name="app_description">App Description</string>
+    <string name="delivery_price">(KD 1.000 delivery)</string>
+
+    <string name="google_maps_key" translatable="false">AIzaSyBIs_MmbCSp_MZLhfqL_qc9Nqc4quNULl0</string>
+    <string name="backendUrl" translatable="false">https://chickenonfire.orderzz.com/</string>
+    <string name="backend_API_Key" translatable="false">4180d117-4485-484e-ad68-f105dab0a1e8</string>
+    <string name="checkout_public_key" translatable="false">pk_test_c7d5bb52-14f1-4297-80b2-b3cd61c8dedb</string>
+    <string name="facebook_app_id" translatable="false">905544646522439</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb905544646522439</string>
+
+    <string name="no_offers_availalbe">No offers available right now!</string>
+    <string name="discount_on_the">discount on the</string>
+
+    <string name="monday_value_eng" translatable="false">11:00 AM - 12:30 AM</string>
+    <string name="tuesday_value_eng" translatable="false">11:00 AM - 12:30 AM</string>
+    <string name="wednesday_value_eng" translatable="false">11:00 AM - 12:30 AM</string>
+    <string name="thursday_value_eng" translatable="false">11:00 AM - 1:30 AM</string>
+    <string name="friday_value_eng" translatable="false">11:00 AM - 1:30 AM</string>
+    <string name="saturday_value_eng" translatable="false">11:00 AM - 12:30 AM</string>
+    <string name="sunday_value_eng" translatable="false">11:00 AM - 12:30 AM</string>
+
+    <string name="minimum_order_value">KD 2.000</string>
+    <string name="service_charge_value">KD 1.000</string>
+    <string name="pre_order_value">Yes</string>
+    <string name="monday_value">11:00 AM - 12:30 AM</string>
+    <string name="tuesday_value">11:00 AM - 12:30 AM</string>
+    <string name="wednesday_value">11:00 AM - 12:30 AM</string>
+    <string name="thursday_value">11:00 AM - 1:30 AM</string>
+    <string name="friday_value">11:00 AM - 1:30 AM</string>
+    <string name="saturday_value">11:00 AM - 12:30 AM</string>
+    <string name="sunday_value">11:00 AM - 12:30 AM</string>
+
+
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delivery_time_value">45 min</string>
+    <string name="min">min</string>
+    <string name="delivery">delivery</string>
+    <string name="sign_in">Sign In</string>
+    <string name="info">Info</string>
+    <string name="amazing">Amazing</string>
+    <string name="reviews">Reviews</string>
+    <string name="goback">GoBack</string>
+    <string name="menu_categories">Menu Categories</string>
+    <string name="kd">KD</string>
+    <string name="share">Share</string>
+    <string name="search">Search</string>
+    <string name="no_result_found">No Result Found</string>
+    <string name="check_the_spelling">Check the spelling of the keywords and try again</string>
+    <string name="optional">(Optional)</string>
+    <string name="special_requests">Special requests?</string>
+    <string name="tap_to_enter_request">Tap to enter request</string>
+    <string name="add_to_basket">Add to basket</string>
+    <string name="choose_item_from_the_list">Choose item from the list</string>
+    <string name="choose_one">Choose 1</string>
+    <string name="choose_items_from_list">Choose items from the list</string>
+    <string name="_1">1</string>
+    <string name="you_must_select_required_add_ons">You must select all the required add ons</string>
+    <string name="order_details">Order Details</string>
+    <string name="view_basket">View basket</string>
+    <string name="total">Total</string>
+    <string name="basket">Basket</string>
+    <string name="checkout">Checkout</string>
+    <string name="remove_all">Remove All</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="social_media">Social Media</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="other">Other</string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="dial">Dial</string>
+    <string name="email">Email</string>
+    <string name="delivery_location">Delivery Location</string>
+    <string name="your_location">Your Location</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_address">Add address</string>
+    <string name="within">Within</string>
+    <string name="delivery_time">Delivery Time</string>
+    <string name="minimum_order_text">Minimum Order</string>
+    <string name="service_charge_text">Service Charge</string>
+    <string name="pre_order_text">Pre-order</string>
+    <string name="restaurant_area_text">Restaurant Area</string>
+    <string name="restaurant_area_value">Hawalli</string>
+    <string name="monday_text">Monday</string>
+    <string name="opening_hours">Opening hours</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="cash_on_delivery">Cash on delivery</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="payment_options">Payment options</string>
+    <string name="location">Location</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="location_not_enabled">Location not enabled</string>
+    <string name="open_location_settings">Location settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="refine_location">Refine location</string>
+    <string name="area">Area</string>
+    <string name="block">Block</string>
+    <string name="street">Street</string>
+    <string name="avenue">Avenue</string>
+    <string name="avenue_optional">Avenue (Optional)</string>
+    <string name="apartment_no">Apartment No</string>
+    <string name="additional_directions_optional">Additional directions (Optional)</string>
+    <string name="floor">Floor</string>
+    <string name="building">Building</string>
+    <string name="select_address">Select Address</string>
+    <string name="change">Change</string>
+    <string name="order_now">Order now</string>
+    <string name="schedule">Schedule</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="place_order">Place order</string>
+    <string name="total_amount">Total amount</string>
+    <string name="payment_summary">Payment summary</string>
+    <string name="pay_with">Pay with</string>
+    <string name="input_delivery_note_here">Input delivery note here</string>
+    <string name="order_special_request_optional">Order Special Request (optional)</string>
+    <string name="our_planet_prefers_less_plastic">Our planet prefers less plastic</string>
+    <string name="no_cultery">No cutlery</string>
+    <string name="your_order">Your Order</string>
+    <string name="by_placing_this_order_you_agree_to_the_credit_card_payment_terms_amp_conditions">By placing this order you agree to the Credit Card payment <font color='#DD0000'> Terms &amp; Conditions</font></string>
+    <string name="add_items">Add items</string>
+    <string name="set_your_delivery_location">Set your delivery location</string>
+    <string name="show_menu">Show Menu</string>
+    <string name="order_your_food_online_from">Order Your Food Online From</string>
+    <string name="search_location">Search location</string>
+    <string name="sorry_we_dont_deliver">Sorry, we don\'t deliver to this area</string>
+    <string name="your_order_has_been_successfully">Your order has been successfully placed. You should receive it within 36 min</string>
+    <string name="okay">Okay</string>
+    <string name="heappy_eating">Happy Eating!</string>
+    <string name="user_a_voucher_on_this_order">User a voucher on this order</string>
+    <string name="enter_voucher_code">Enter voucher code</string>
+    <string name="user_voucher">User Voucher</string>
+    <string name="voucher_code_invalid">Voucher Code Invalid!</string>
+    <string name="retry">Retry</string>
+    <string name="failed_to_connect_to_chicken_on_fire_please_check_your_device_s_network_connection">Failed to connect to Chicken on Fire. Please check your device\'s network connection.</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="connection_error">Connection error</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_email">Continue with email</string>
+    <string name="your_everyday_right_away">Your everyday, right away</string>
+    <string name="login_or_create_an_account_to_be_able_save_your_favourite_items_and_give_us_a_feedback_about_our_restaurant">Login or create an account to be able save your favourite items and give us a feedback about our restaurant</string>
+    <string name="login_or_create_an_account">Login or create an account</string>
+    <string name="guest">Guest</string>
+    <string name="show">Show</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create account</string>
+    <string name="hide">Hide</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="please_select_payment_method">Please select a payment method</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="extremely_bad">Extremely bad</string>
+    <string name="very_bad">Very bad</string>
+    <string name="bad">Bad</string>
+    <string name="very_good">Very Good</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="quality_of_food">Quality of food</string>
+    <string name="value_for_money">Value for money</string>
+    <string name="order_packaging">Order packaging</string>
+    <string name="based_on">Based on</string>
+    <string name="reviews_smallS">reviews</string>
+    <string name="closed">Closed</string>
+    <string name="is_not_available">is not available at this time. Would you like to know our opening hours?</string>
+    <string name="view_opening_hours">View opening hours</string>
+    <string name="mobile">Mobile</string>
+    <string name="sorry_we_do_not_support_paypal">Sorry we do not support PayPal payments at this time</string>
+    <string name="your_password_must_be_at_least_6_characters">Your password must be at least 6 characters</string>
+    <string name="by_creating_an_account_you_agree_to_the_pirvacy_policy_and_to_the_terms_of_use">By creating an account you agree to the <font android:color='#DD0000'>privacy policy</font> and to the <font android:color='#DD0000'>terms of use</font></string>
+    <string name="please_enter_this_field">Please enter this field</string>
+    <string name="please_enter_a_valid_email">Please enter a valid email</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="favourites">Favourites</string>
+    <string name="added_to_favourites">Added to favourites</string>
+    <string name="how_would_you_rate_the">How would you rate the</string>
+    <string name="submit_review">Submit review</string>
+    <string name="your_feedback_is_important_let_us_know_your_thoughts_suggestions_or_if_there_is_anything_you_didn_t_like_in_chicken_on_fire">Your feedback is important. Let us know your thoughts, suggestions, or if there is anything you didn\'t like in Chicken on fire</string>
+    <string name="type_here">Type here</string>
+    <string name="leave_comment">Leave comment</string>
+    <string name="add_review">Add review</string>
+    <string name="a_message_has_been_sent_to_your_email">A message has been sent to your email to reset the password</string>
+    <string name="please_wait_a_while_before">Please wait a while before sending another request</string>
+    <string name="something_went_wrong_please_try_again">Something went wrong, please try again later</string>
+    <string name="account_not_found">Account not found</string>
+    <string name="sorry_the_verification_code_you_have_entered_is_incorrect">Sorry, the verification code you have entered is incorrect.</string>
+    <string name="please_enter_the_code_sent_to_your_phone">Please enter the code sent to your phone</string>
+    <string name="verify_mobile_number">Verify mobile number</string>
+    <string name="please_wait_at_least_one_minute">Please wait at least 1 minute before sending another verification code.</string>
+    <string name="our_digital_experts">Our digital experts</string>
+    <string name="language">Language</string>
+    <string name="select">Select</string>
+    <string name="remove">REMOVE</string>
+    <string name="use_voucher">Use Voucher</string>
+    <string name="last_order">Last order</string>
+    <string name="re_order">Re-order</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="rate">Rate</string>
+    <string name="get_code">Get code</string>
+    <string name="we_will_send_you_an_sms_with_the_verification_code_on_the_number_above">We will send you an SMS with the verification code on the number above.</string>
+    <string name="verify">Verify</string>
+    <string name="enter_4_digit_code">Enter 4 digit code</string>
+    <string name="didn_t_receive_the_code">Didn\'t receive the code?</string>
+    <string name="resend_code">Resend code</string>
+    <string name="call_me">Call me</string>
+    <string name="how_was_your_order_from">How was your order from</string>
+    <string name="how_was_the_delivery">How was the delivery?</string>
+    <string name="write_your_feedback">Write your Feedback</string>
+    <string name="submit">Submit</string>
+    <string name="continue_s">Continue</string>
+    <string name="how_was_your_delivery_from">How was your delivery from</string>
+    <string name="thank_you_for_your_feedback">Thank you for your feedback!</string>
+    <string name="even_better">even better!</string>
+    <string name="you_just_helped_us_make">You just helped us make</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="customer_feedback">Customer Feedback</string>
+    <string name="customer_name">Customer Name:</string>
+    <string name="customer_phone_number">Customer Phone Number:</string>
+    <string name="order_rating">Order Rating:</string>
+    <string name="delivery_rating">Delivery Rating:</string>
+    <string name="comment">Comment:</string>
+    <string name="office">Office</string>
+    <string name="house">House</string>
+    <string name="minimum_order_amount">Minimum order amount</string>
+    <string name="share_your_thoughts_with_us">Share your thoughts with us</string>
+    <string name="select_language">Select Language</string>
+    <string name="drag_the_map_and_match_the_pin_to_your_exact_delivery_location">Drag the map and match the pin to your exact delivery location</string>
+    <string name="busy">Busy</string>
+    <string name="is_current_busy">is currently busy at this moment. We will back in a while!</string>
+    <string name="the_restaurant_will_be_closed_at_this_time">The restaurant will be closed at this time</string>
+    <string name="knet">KNET</string>
+    <string name="transaction_completed">Transaction Completed</string>
+    <string name="transaction_failed">Transaction failed</string>
+    <string name="from_the_list">from the list</string>
+    <string name="choose">Choose</string>
+    <string name="choose_up_to">Choose up to</string>
+    <string name="items_from_the_list">items from the list</string>
+    <string name="choose_between">Choose between</string>
+    <string name="and">and</string>
+    <string name="items">items</string>
+    <string name="you_cannot_choose_more_than">You cannot choose more than</string>
+    <string name="ratings_amp_reviews"><![CDATA[Ratings & Reviews]]></string>
+    <string name="restaurant_info">Restaurant Info</string>
+    <string name="this_is_required">This is required</string>
+
+    <string-array name="address_type">
+        <item>House</item>
+        <item>Apartment</item>
+        <item>Office</item>
+    </string-array>
+
+
+</resources>

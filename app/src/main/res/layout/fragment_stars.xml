@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="170dp">
+
+    <TextView
+        android:id="@+id/star_rating_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="How would you rate Chicken on Fire"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_grey_star"
+        app:layout_constraintEnd_toStartOf="@+id/star2"
+        app:layout_constraintTop_toTopOf="@+id/star2"
+        app:srcCompat="@drawable/ic_grey_star" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_grey_star"
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_grey_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star_rating_title" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_grey_star"
+        app:layout_constraintStart_toEndOf="@+id/star3"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_grey_star"
+        app:layout_constraintStart_toEndOf="@+id/star4"
+        app:layout_constraintTop_toTopOf="@+id/star4" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/very_bad"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/star1"
+        app:layout_constraintStart_toStartOf="@+id/star1"
+        app:layout_constraintTop_toBottomOf="@+id/star1" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/excellent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/star5"
+        app:layout_constraintStart_toStartOf="@+id/star5"
+        app:layout_constraintTop_toBottomOf="@+id/star1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

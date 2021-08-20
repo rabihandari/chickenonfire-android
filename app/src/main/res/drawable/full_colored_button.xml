@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false" android:state_enabled="true">
+        <shape android:shape="rectangle"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="0dp"
+            android:padding="0dp">
+            <corners android:radius="10dip" />
+            <solid android:color="@color/colorAccent"/>
+
+        </shape>
+    </item>
+
+
+    <item android:state_pressed="true" android:state_enabled="true">
+        <shape android:shape="rectangle"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="0dp"
+            android:padding="0dp">
+            <corners android:radius="10dip" />
+            <solid android:color="@color/colorAccentDark"/>
+
+        </shape>
+    </item>
+
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="0dp"
+            android:padding="0dp">
+            <corners android:radius="10dip" />
+            <solid android:color="@color/colorAccent"/>
+
+        </shape>
+    </item>
+
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="0dp"
+            android:padding="0dp">
+            <corners android:radius="10dip" />
+            <solid android:color="@color/colorAccentLighter"/>
+
+        </shape>
+    </item>
+
+
+</selector>

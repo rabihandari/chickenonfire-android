@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/final_item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/_1"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="x"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/final_item_quantity"
+        app:layout_constraintStart_toStartOf="@+id/final_item_quantity"
+        app:layout_constraintTop_toTopOf="@+id/final_item_quantity" />
+
+    <TextView
+        android:id="@+id/final_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto"
+        android:lines="1"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/final_item_price"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/final_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="viewStart"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/final_item_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="@color/myFontColor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/final_item_price"
+        app:layout_constraintStart_toStartOf="@+id/final_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/final_item_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
