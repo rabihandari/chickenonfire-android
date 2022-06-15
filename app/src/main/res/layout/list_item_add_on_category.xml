@@ -47,17 +47,30 @@
         app:layout_constraintTop_toBottomOf="@+id/list_item_genre_name" />
 
     <TextView
+        android:id="@+id/list_item_optional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/optional"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_genre_name"
+        app:layout_constraintStart_toEndOf="@+id/list_item_genre_name"
+        app:layout_constraintTop_toTopOf="@+id/list_item_genre_name" />
+
+    <TextView
         android:id="@+id/list_item_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/roboto"
         android:text="@string/this_is_required"
         android:textColor="@color/redColor"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/list_item_genre_name"
-        app:layout_constraintStart_toEndOf="@+id/list_item_genre_name"
-        app:layout_constraintTop_toTopOf="@+id/list_item_genre_name" />
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_optional"
+        app:layout_constraintStart_toEndOf="@+id/list_item_optional"
+        app:layout_constraintTop_toTopOf="@+id/list_item_optional" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

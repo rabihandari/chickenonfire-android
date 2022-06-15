@@ -7,7 +7,7 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <com.zeappa.chickenonfire.tools.CustomViewPager
+    <com.orderzzteam.chickenonfire.tools.CustomViewPager
         android:id="@+id/feedback_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -57,6 +57,7 @@
         android:text="@string/guest"
         android:textColor="@color/colorAccent"
         android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/sign_in_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

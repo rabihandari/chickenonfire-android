@@ -45,19 +45,29 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/order_your_food_online_from"
             android:textColor="@android:color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/cardView7"
             app:layout_constraintStart_toStartOf="@+id/cardView7"
-            app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/splash_screen_logo" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView7"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:visibility="gone"
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    app:srcCompat="@drawable/logo" />
+                    app:srcCompat="@drawable/app_logo" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -129,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/general_location_setlocation_edittext" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/general_area_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -137,5 +147,18 @@
         app:layout_constraintEnd_toEndOf="@+id/general_location_setlocation_edittext"
         app:layout_constraintTop_toTopOf="@+id/general_location_setlocation_edittext"
         app:srcCompat="@drawable/ic_arrow_down" />
+
+    <ProgressBar
+        android:id="@+id/general_area_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/general_location_setlocation_edittext"
+        app:layout_constraintTop_toTopOf="@+id/general_location_setlocation_edittext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

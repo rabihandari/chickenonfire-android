@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout47"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/myorder_item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_medium2"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myorder_item_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium2"
+        android:text="Accepted"
+        android:textColor="@color/greenColor"
+        app:layout_constraintStart_toStartOf="@+id/myorder_item_id"
+        app:layout_constraintTop_toBottomOf="@+id/myorder_item_id" />
+
+    <TextView
+        android:id="@+id/myorder_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="19, Oct 2021"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/myorder_item_status"
+        app:layout_constraintTop_toBottomOf="@+id/myorder_item_status" />
+
+    <TextView
+        android:id="@+id/myorder_item_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Total: 2.000 KD"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/myorder_item_date"
+        app:layout_constraintTop_toBottomOf="@+id/myorder_item_date" />
+
+    <TextView
+        android:id="@+id/myorder_item_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Reason: We are closed"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/myorder_item_total"
+        app:layout_constraintTop_toBottomOf="@+id/myorder_item_total" />
+
+    <ImageView
+        android:id="@+id/divider12"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/ligtergrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myorder_item_reason" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_chevron_right" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

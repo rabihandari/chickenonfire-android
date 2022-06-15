@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">شكن أون فير</string>
+    <string name="app_name">فود هب</string>
     <string name="app_description">وصف التطبيق</string>
     <string name="delivery_price">(د.ك 1.000 للتوصيل)</string>
     <string name="no_offers_availalbe">لا توجد عروض متاحة الآن</string>
@@ -120,7 +120,8 @@
     <string name="order_your_food_online_from">اطلب طعامك عبر الإنترنت من</string>
     <string name="search_location">ابحث عن الموقع</string>
     <string name="sorry_we_dont_deliver">عذرا ، نحن لا نوصل هذه المنطقة</string>
-    <string name="your_order_has_been_successfully">تم وضع طلبك بنجاح. يجب أن تحصل عليه في غضون 36 دقيقة</string>
+    <string name="your_order_has_been_successfully">تم وضع طلبك بنجاح. يجب أن تحصل عليه في غضون</string>
+    <string name="your_order_has_been_successfully_pickup">تم وضع طلبك بنجاح. نتوقع زيارتك قريبا!</string>
     <string name="okay">حسنا</string>
     <string name="heappy_eating">أكل سعيد!</string>
     <string name="user_a_voucher_on_this_order">استخدم قسيمة في هذا الطلب</string>
@@ -239,11 +240,66 @@
     <string name="ratings_amp_reviews">التقييمات والمراجعات</string>
     <string name="restaurant_info">معلومات المطعم</string>
     <string name="this_is_required">هذا مطلوب</string>
+    <string name="please_select_an_address_within_the_selected_area_you_chose">يرجى تحديد عنوان داخل المنطقة المحددة التي اخترتها</string>
+    <string name="pickup">عن طريق الاستلام</string>
+    <string name="delivery_capital">عن طريق التسليم</string>
+    <string name="sorry_cash_and_scheduling_not_allowed">عذرًا ، لا يُسمح بالدفع نقدًا عند التسليم وجدولة التحديدات معًا</string>
+    <string name="please_select_all_required_fields">الرجاء تحديد جميع الحقول المطلوبة</string>
+    <string name="continue_as_guest">تواصل كضيف</string>
+    <string name="or">أو</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="passwords_do_not_match">كلمة المرور غير مطابقة</string>
+    <string name="your_orders">طلباتك</string>
+    <string name="my_orders">طلباتي</string>
+    <string name="order_id">رقم التعريف الخاص بالطلب: #</string>
+    <string name="total_with_colun">مجموع:</string>
+    <string name="pending">تحت المعالجة</string>
+    <string name="indelivery">جاري الارسال</string>
+    <string name="rejected">مرفوض</string>
+    <string name="cancelled">ألغيت</string>
+    <string name="delivered">تم التوصيل</string>
+    <string name="accepted">قبلت</string>
+    <string name="your_order_status_is">حالة طلبك هي</string>
+    <string name="your_order_status_is_proccessing">حالة طلبك قيد المعالجة</string>
+    <string name="pending_description">طلبك قيد المعالجة. بمجرد قبول المطبخ ، سوف تحصل على طلبك</string>
+    <string name="indelivery_description">طلبك في الطريق. يجب أن تتلقى طلبك في أي وقت قريبًا</string>
+    <string name="rejected_description">تم رفض طلبك. سبب:</string>
+    <string name="cancelled_description">تم إلغاء طلبك. سبب:</string>
+    <string name="delivered_description">تم تسليم طلبك. شكرا لك على الطلب من مطعمنا. وجبة هنيئة</string>
+    <string name="it_could_take_upto">يمكن أن يستغرق ما يصل إلى</string>
+    <string name="from_the_order_time">دقيقة ، من وقت الطلب ، لتلقي طلبك</string>
+    <string name="payment_should_be_performed_during_picking_up_of_order_or_by_using_our_online_payment_options">يجب أن يتم الدفع أثناء استلام الطلب ، أو باستخدام خيارات الدفع عبر الإنترنت</string>
+    <string name="pickup_time">وقت الاستلام</string>
+    <string name="expected_time_to_receive_your_order">الوقت المتوقع لتلقي طلبك</string>
+    <string name="address_type">نوع العنوان</string>
+    <string name="leave_order_at_the_door">اترك طلبك عند الباب</string>
+    <string name="leave_your_order_at_the_door_to_protect_yourself">اترك طلبك عند الباب لحماية نفسك</string>
+    <string name="okay_got_it">حسنا</string>
+    <string name="receive_by">تلقي الطلب عن طريق</string>
+    <string name="offer_status_updated">تغيرت حالة الطلب</string>
+    <string name="your_order_status_has_been_updated">Your order status has been changed. Click View Order to track your order</string>
+    <string name="view_order">تحقق من الطلب</string>
+    <string name="view_offer">تحقق من العرض</string>
+    <string name="new_offer">عرض جديد</string>
+    <string name="a_new_offer_has_been_released">تم نشر عرض جديد. افحصه الآن!</string>
+    <string name="the_minimum_order_amount_for_this_voucher_is">الحد الأدنى لمبلغ الطلب لهذه الإيصال هو</string>
+    <string name="service_fee_changed">تم تغيير رسوم الخدمة</string>
+    <string name="the_service_fee_has_just_been_changed">تم تغيير رسوم الخدمة إلى</string>
+    <string name="do_you_wish_to_complete">هل ترغب في الاستمرار؟</string>
+    <string name="invalid_schedule_picked">تم اختيار جدول غير صالح</string>
+    <string name="the_restaurant_will_be_closed_at_the_time">سيتم إغلاق المطعم في وقت طلبك</string>
+    <string name="we_dont_allow_scheduling_with_cash">عذرًا ، لكننا لا نسمح بجدولة طلب والدفع نقدًا عند التسليم. الرجاء تحديد طريقة دفع مختلفة</string>
+    <string name="demo">تطبيق تجريبي</string>
+    <string name="the_application_is_used_for_demo">يستخدم هذا التطبيق للعرض. لذلك ، لن يتم تقديم طلبك. شكرا لك!</string>
+    <string name="all">الجميع</string>
+    <string name="update_required">مطلوب التحديث</string>
+    <string name="please_update_your_app">يرجى تحديث التطبيق الخاص بك إلى أحدث إصدار للمتابعة</string>
+    <string name="update">تحديث</string>
 
 
     <string-array name="address_type">
-        <item>منزل</item>
         <item>شقة</item>
+        <item>منزل</item>
         <item>مكتب</item>
     </string-array>
 </resources>

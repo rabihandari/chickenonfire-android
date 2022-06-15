@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:alpha="1"
         android:fontFamily="sans-serif-medium"
         android:text="@string/area"
         android:textColor="@android:color/black"
@@ -55,4 +56,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_address_item_mobile"
         app:srcCompat="@color/ligtergrey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

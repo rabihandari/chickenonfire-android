@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "556020953858",
+    "project_id": "orderzz",
+    "storage_bucket": "orderzz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556020953858:android:1897a952d7af57d707c81b",
+        "android_client_info": {
+          "package_name": "com.orderzzteam.chickenonfire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556020953858-6b5ctvms5obg292i335oil5e3dqhd92q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orderzzteam.chickenonfire",
+            "certificate_hash": "9f3a67e856b9ebaf68f15be1555008720b999cd6"
+          }
+        },
+        {
+          "client_id": "556020953858-1ki4qadue6a4ehd84778bkp15kfg3pqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE_rsvEzfUJI8QvR05BXaZx9OCUG0n1zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556020953858-1ki4qadue6a4ehd84778bkp15kfg3pqq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "556020953858-694qi1dgc1h15oc4cnnb626nt77avoao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orderzzteam.Chicken-On-Fire"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556020953858:android:9a5eebfe8ecec0e007c81b",
+        "android_client_info": {
+          "package_name": "com.orderzzteam.pltburgers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556020953858-1ki4qadue6a4ehd84778bkp15kfg3pqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE_rsvEzfUJI8QvR05BXaZx9OCUG0n1zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556020953858-1ki4qadue6a4ehd84778bkp15kfg3pqq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "556020953858-694qi1dgc1h15oc4cnnb626nt77avoao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orderzzteam.Chicken-On-Fire"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

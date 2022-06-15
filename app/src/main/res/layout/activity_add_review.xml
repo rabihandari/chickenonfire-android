@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_arrow" />
 
-    <com.zeappa.chickenonfire.tools.CustomViewPager
+    <com.orderzzteam.chickenonfire.tools.CustomViewPager
         android:id="@+id/add_review_pager"
         android:layout_width="match_parent"
         android:layout_height="170dp"
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_review_toolbar" >
 
-    </com.zeappa.chickenonfire.tools.CustomViewPager>
+    </com.orderzzteam.chickenonfire.tools.CustomViewPager>
 
     <TextView
         android:id="@+id/textView34"

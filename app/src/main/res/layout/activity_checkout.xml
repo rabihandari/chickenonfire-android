@@ -57,6 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/checkout_scrollview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,12 +86,14 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
-                    <com.google.android.gms.maps.MapView
+                    <ImageView
                         android:id="@+id/mapView3"
                         android:layout_width="0dp"
                         android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -101,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        app:layout_constraintStart_toStartOf="@+id/mapView3"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/mapView3"
                         app:srcCompat="@drawable/ic_location" />
 
@@ -119,12 +122,16 @@
 
                     <TextView
                         android:id="@+id/checkout_area"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
                         android:fontFamily="sans-serif-medium"
+                        android:gravity="start"
+                        android:lines="1"
                         android:text="@string/area"
                         android:textColor="@android:color/black"
+                        app:layout_constraintEnd_toStartOf="@+id/checkout_change_button"
                         app:layout_constraintStart_toEndOf="@+id/ic_location"
                         app:layout_constraintTop_toTopOf="@+id/ic_location" />
 
@@ -146,14 +153,27 @@
                         android:id="@+id/checkout_mobile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Mobile: +961 70451879"
                         android:textColor="@color/myFontColor"
                         android:textSize="13sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/checkout_location_error"
                         app:layout_constraintStart_toStartOf="@+id/checkout_block_street_building_floor_apartmentno"
                         app:layout_constraintTop_toBottomOf="@+id/checkout_block_street_building_floor_apartmentno" />
+
+                    <TextView
+                        android:id="@+id/checkout_location_error"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/please_select_an_address_within_the_selected_area_you_chose"
+                        android:textColor="@color/redColor"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/checkout_mobile" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -354,7 +374,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Leave Order at the Door"
+                    android:text="@string/leave_order_at_the_door"
                     android:textColor="@android:color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -363,7 +383,7 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Leave your order at the door to protect yourself"
+                    android:text="@string/leave_your_order_at_the_door_to_protect_yourself"
                     android:textColor="@color/myFontColor"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -420,10 +440,60 @@
                 app:layout_constraintTop_toBottomOf="@+id/order_special_request_text" />
 
             <TextView
+                android:id="@+id/receive_by_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/receive_by"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/special_request_edittext" />
+
+            <RadioGroup
+                android:id="@+id/receiving_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receive_by_text">
+
+                <RadioButton
+                    android:id="@+id/delivery_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="true"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/delivery_capital" />
+
+                <RadioButton
+                    android:id="@+id/pickup_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/pickup" />
+            </RadioGroup>
+
+            <TextView
                 android:id="@+id/pay_with_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="160dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/pay_with"
                 android:textColor="@android:color/black"
@@ -610,6 +680,8 @@
                 android:background="@color/colorAccentLightest"
                 android:onClick="viewVoucherCard"
                 android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/subtotal_text">
 
                 <ImageView
@@ -719,12 +791,12 @@
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/full_colored_button"
                 android:onClick="placeOrder"
+                android:stateListAnimator="@null"
                 android:text="@string/place_order"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:stateListAnimator="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/total_amount_text" />
 

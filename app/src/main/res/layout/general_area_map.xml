@@ -62,16 +62,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar9"
         app:layout_constraintVertical_bias="0.0"
-        tools:context="com.zeappa.chickenonfire.GeneralAreaMap" />
+        tools:context="com.orderzzteam.chickenonfire.GeneralAreaMap" />
 
-
-    <include
-        layout="@layout/bottom_sheet_location"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/general_location_marker"
@@ -132,8 +124,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="192dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/general_location_confirm_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_current_location_holder" />
 

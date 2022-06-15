@@ -70,7 +70,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_item_containing_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/flavours_recyclerview" />
 
     <ImageView
         android:id="@+id/menu_item_disction_icon"
@@ -105,53 +105,17 @@
         app:layout_constraintStart_toEndOf="@+id/menu_item_price"
         app:layout_constraintTop_toTopOf="@+id/menu_item_price" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menu_item_containing_layout"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/flavours_recyclerview"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@+id/menu_item_price"
-        app:layout_constraintTop_toBottomOf="@+id/menu_item_price">
-
-        <ImageView
-            android:id="@+id/menu_item_garlic_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:visibility="gone"
-            app:layout_constraintStart_toEndOf="@+id/menu_item_onion_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_garlic" />
-
-        <ImageView
-            android:id="@+id/menu_item_vegiterian_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:visibility="gone"
-            app:layout_constraintStart_toEndOf="@+id/menu_item_chilli_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_vegiterian" />
-
-        <ImageView
-            android:id="@+id/menu_item_onion_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:visibility="gone"
-            app:layout_constraintStart_toEndOf="@+id/menu_item_vegiterian_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_onion" />
-
-        <ImageView
-            android:id="@+id/menu_item_chilli_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_chilli" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_item_price" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

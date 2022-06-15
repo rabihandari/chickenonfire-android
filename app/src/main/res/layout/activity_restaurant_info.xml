@@ -99,6 +99,7 @@
                 android:id="@+id/cardView4"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:foregroundGravity="center"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardView3"
                 app:layout_constraintEnd_toEndOf="@+id/cardView3"
@@ -108,16 +109,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:id="@+id/imageView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:foregroundGravity="center"
                         android:padding="5dp"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/logo" />
+                        app:srcCompat="@drawable/app_logo" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -161,11 +166,14 @@
 
             <TextView
                 android:id="@+id/restaurant_info_desc"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
                 android:text="@string/app_description"
-                app:layout_constraintEnd_toEndOf="@+id/restaurant_info_name"
-                app:layout_constraintStart_toStartOf="@+id/restaurant_info_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/restaurant_info_name" />
 
             <TextView
@@ -333,25 +341,25 @@
                 android:id="@+id/monday_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/monday_text"
                 android:textColor="@android:color/black"
                 android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="@+id/restaurant_info_openinghours_text"
-                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_openinghours_text" />
+                app:layout_constraintTop_toBottomOf="@+id/sunday_text" />
 
             <TextView
                 android:id="@+id/moday_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/monday_value"
                 android:textColor="@android:color/black"
                 android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/monday_text"
                 app:layout_constraintEnd_toEndOf="@+id/restaurant_info_area_value"
-                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_openinghours_text" />
+                app:layout_constraintTop_toTopOf="@+id/monday_text" />
 
             <TextView
                 android:id="@+id/tuesday_text"
@@ -475,13 +483,13 @@
                 android:id="@+id/sunday_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/sunday"
                 android:textColor="@android:color/black"
                 android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="@+id/saturday_text"
-                app:layout_constraintTop_toBottomOf="@+id/saturday_text" />
+                app:layout_constraintTop_toBottomOf="@+id/restaurant_info_openinghours_text" />
 
             <TextView
                 android:id="@+id/sunday_value"
@@ -504,7 +512,7 @@
                 android:background="@color/colorAccentLight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sunday_text"
+                app:layout_constraintTop_toBottomOf="@+id/saturday_text"
                 app:srcCompat="@color/ligtergrey" />
 
             <TextView
@@ -637,29 +645,42 @@
                 app:layout_constraintEnd_toEndOf="@+id/sunday_value"
                 app:layout_constraintTop_toTopOf="@+id/location_text" />
 
-            <com.google.android.gms.maps.MapView
+            <ImageView
                 android:id="@+id/mapView"
                 android:layout_width="0dp"
                 android:layout_height="260dp"
                 android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/location_text" />
+
+            <ImageView
+                android:id="@+id/restaurant_info_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/mapView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/mapView"
+                app:layout_constraintTop_toTopOf="@+id/mapView"
+                app:layout_constraintVertical_bias="0.40"
+                app:srcCompat="@drawable/ic_marker" />
 
             <TextView
                 android:id="@+id/get_directions_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/roboto_medium"
+                android:onClick="getDirections"
                 android:padding="24dp"
                 android:text="@string/get_directions"
                 android:textColor="@color/colorAccent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mapView"
-                android:onClick="getDirections"/>
+                app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

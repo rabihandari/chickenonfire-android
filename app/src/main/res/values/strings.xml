@@ -3,12 +3,13 @@
     <string name="app_description">App Description</string>
     <string name="delivery_price">(KD 1.000 delivery)</string>
 
-    <string name="google_maps_key" translatable="false">AIzaSyBIs_MmbCSp_MZLhfqL_qc9Nqc4quNULl0</string>
     <string name="backendUrl" translatable="false">https://chickenonfire.orderzz.com/</string>
     <string name="backend_API_Key" translatable="false">4180d117-4485-484e-ad68-f105dab0a1e8</string>
-    <string name="checkout_public_key" translatable="false">pk_test_c7d5bb52-14f1-4297-80b2-b3cd61c8dedb</string>
+    <string name="google_maps_key" translatable="false">AIzaSyBIs_MmbCSp_MZLhfqL_qc9Nqc4quNULl0</string>
     <string name="facebook_app_id" translatable="false">905544646522439</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb905544646522439</string>
+    <string name="default_restaurant_latitude" translatable="false">29.196913</string>
+    <string name="default_restaurant_longitude" translatable="false">48.052734</string>
 
     <string name="no_offers_availalbe">No offers available right now!</string>
     <string name="discount_on_the">discount on the</string>
@@ -136,7 +137,8 @@
     <string name="order_your_food_online_from">Order Your Food Online From</string>
     <string name="search_location">Search location</string>
     <string name="sorry_we_dont_deliver">Sorry, we don\'t deliver to this area</string>
-    <string name="your_order_has_been_successfully">Your order has been successfully placed. You should receive it within 36 min</string>
+    <string name="your_order_has_been_successfully">Your order has been successfully placed. You should receive it within</string>
+    <string name="your_order_has_been_successfully_pickup">Your order has been successfully placed. We are expecting your visit soon!</string>
     <string name="okay">Okay</string>
     <string name="heappy_eating">Happy Eating!</string>
     <string name="user_a_voucher_on_this_order">User a voucher on this order</string>
@@ -255,10 +257,71 @@
     <string name="ratings_amp_reviews"><![CDATA[Ratings & Reviews]]></string>
     <string name="restaurant_info">Restaurant Info</string>
     <string name="this_is_required">This is required</string>
+    <string name="please_select_an_address_within_the_selected_area_you_chose">Please select an address within the selected area you chose</string>
+    <string name="pickup">Pickup</string>
+    <string name="delivery_capital">Delivery</string>
+    <string name="sorry_cash_and_scheduling_not_allowed">Sorry, cash on delivery and scheduling selections are not allowed together</string>
+    <string name="please_select_all_required_fields">Please selected all required fields</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="or">OR</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="your_orders">Your Orders</string>
+    <string name="my_orders">My Orders</string>
+    <string name="order_id">Order ID: #</string>
+    <string name="total_with_colun">Total:</string>
+    <string name="pending">PENDING</string>
+    <string name="indelivery">INDELIVERY</string>
+    <string name="rejected">REJECTED</string>
+    <string name="cancelled">CANCELLED</string>
+    <string name="delivered">DELIVERED</string>
+    <string name="accepted">ACCEPTED</string>
+    <string name="your_order_status_is">Your order status is</string>
+    <string name="your_order_status_is_proccessing">Your order status is processing</string>
+    <string name="pending_description">Your order is pending. Once it\'s accepted by the kitchen, you will get your order in</string>
+    <string name="indelivery_description">Your order is on its way. You should receive your order anytime soon</string>
+    <string name="rejected_description">Your order has been rejected. Reason:</string>
+    <string name="cancelled_description">Your order has been cancelled. Reason:</string>
+    <string name="delivered_description">Your order is delivered. Thank you for ordering from our restaurant and happy eating!</string>
+    <string name="it_could_take_upto">It could take up to</string>
+    <string name="from_the_order_time">min, from the order time, to receive your order</string>
+    <string name="payment_should_be_performed_during_picking_up_of_order_or_by_using_our_online_payment_options">Payment should be performed during picking up of order, or by using our online payment options</string>
+    <string name="pickup_time">Pickup Time</string>
+    <string name="expected_time_to_receive_your_order">Expected time to receive your order</string>
+    <string name="address_type">Address type</string>
+    <string name="leave_order_at_the_door">Leave Order at the Door</string>
+    <string name="leave_your_order_at_the_door_to_protect_yourself">Leave your order at the door to protect yourself</string>
+    <string name="okay_got_it">Okay, got it</string>
+    <string name="receive_by">Receive by</string>
+    <string name="offer_status_updated">Order Status Updated</string>
+    <string name="your_order_status_has_been_updated">Your order status has been updated. Click View Order to track your order</string>
+    <string name="view_order">View Order</string>
+    <string name="view_offer">View Offer</string>
+    <string name="new_offer">New Offer</string>
+    <string name="a_new_offer_has_been_released">A new offer has just been released. Check it out now!</string>
+    <string name="the_minimum_order_amount_for_this_voucher_is">The minimum order amount for this voucher is</string>
+    <string name="service_fee_changed">Service Fee Changed</string>
+    <string name="the_service_fee_has_just_been_changed">The service fee has just been changed to</string>
+    <string name="do_you_wish_to_complete">Do you wish to continue?</string>
+    <string name="invalid_schedule_picked">Invalid Schedule Picked</string>
+    <string name="the_restaurant_will_be_closed_at_the_time">The restaurant will be closed at the time of your order</string>
+    <string name="we_dont_allow_scheduling_with_cash">Sorry, but we do not allow scheduling an order and paying by cash on delivery. Please select a different payment method</string>
+    <string name="demo">Demo</string>
+    <string name="the_application_is_used_for_demo">This application is used for demo purposes. Therefore, your order will not be placed. Thank you!</string>
+    <string name="all">All</string>
+    <string name="update_required">Update Required</string>
+    <string name="please_update_your_app">Please update your application to the latest version to continue</string>
+    <string name="update">Update</string>
+
+    <string-array name="address_type_static">
+        <item>Apartment</item>
+        <item>House</item>
+        <item>Office</item>
+    </string-array>
 
     <string-array name="address_type">
-        <item>House</item>
         <item>Apartment</item>
+        <item>House</item>
         <item>Office</item>
     </string-array>
 

@@ -58,8 +58,6 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/item_order_scrollview"
             android:layout_width="match_parent"
-
-
             android:layout_height="match_parent"
             android:background="@android:color/white"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">

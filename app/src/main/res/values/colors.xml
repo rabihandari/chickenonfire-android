@@ -7,6 +7,7 @@
     <color name="colorAccentLighter">#95F44336</color>
     <color name="colorAccentLightest">#5BFFD1CF</color>
     <color name="colorAccentDark">#DD0000</color>
+    <color name="colorAccent_trans">#BFD82926</color>
 
     <color name="ligtergrey">#F0F0F0</color>
     <color name="lightestGreen">#4AE5FFE6</color>
@@ -16,4 +17,8 @@
     <color name="closingScrim">#72000000</color>
     <color name="redColor">#FF0000</color>
     <color name="greenColor">#00FF09</color>
+    <color name="orangeColor">#FF9800</color>
+    <color name="darkYellow">#FFC107</color>
+    <color name="lightBlue">#00BCD4</color>
+    <color name="dark_black_trans">#40000000</color>
 </resources>

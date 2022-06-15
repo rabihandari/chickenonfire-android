@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/get_location_toolbar"
-        tools:context="com.zeappa.chickenonfire.GetLocationActivity" />
+        tools:context="com.orderzzteam.chickenonfire.GetLocationActivity" />
 
     <Button
         android:id="@+id/get_location_confirm_button"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.zeappa.chickenonfire">
+    package="com.orderzzteam.chickenonfire">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -11,7 +11,7 @@
 
 
     <application
-        android:name=".RestaurantApplication"
+        android:name="com.orderzzteam.chickenonfire.RestaurantApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name"
@@ -21,6 +21,21 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <service
+            android:name="com.orderzzteam.chickenonfire.tools.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -32,31 +47,12 @@
 
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
-
-        <activity android:name=".SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".GeneralArea" />
-        <activity android:name=".GeneralAreaMap" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".ItemOrderActivity"
-            android:screenOrientation="portrait"
-            android:isScrollContainer="true"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-        <activity android:name=".BasketActivity" />
-        <activity android:name=".GetLocationActivity" />
-        <activity android:name=".AddAddressActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity android:name=".RestaurantInfoActivity" />
-        <activity android:name=".CheckoutActivity" />
-        <activity android:name=".SelectAddressActivity" />
-        <activity android:name=".NoInternetActivity" />
-        <activity android:name=".SignInActivity"
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -65,14 +61,63 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInWithEmailActivity" />
-        <activity android:name=".ForgottenPasswordActivity" />
-        <activity android:name=".ReviewsActivity" />
-        <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".FavouritesActivity" />
-        <activity android:name=".AddReviewActivity" />
-        <activity android:name=".LanguageActivity" />
-        <activity android:name=".tools.KnetWebView" />
+
+        <activity android:name="com.orderzzteam.chickenonfire.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.orderzzteam.chickenonfire.HomeActivity"
+            android:parentActivityName="com.orderzzteam.chickenonfire.GeneralArea"/>
+        <activity android:name="com.orderzzteam.chickenonfire.GeneralArea"
+            android:parentActivityName="com.orderzzteam.chickenonfire.SplashScreen"/>
+        <activity android:name="com.orderzzteam.chickenonfire.GeneralAreaMap"
+            android:parentActivityName="com.orderzzteam.chickenonfire.GeneralArea"/>
+        <activity android:name="com.orderzzteam.chickenonfire.SearchActivity"
+            android:parentActivityName="com.orderzzteam.chickenonfire.HomeActivity"/>
+        <activity android:name="com.orderzzteam.chickenonfire.ItemOrderActivity"
+            android:screenOrientation="portrait"
+            android:isScrollContainer="true"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName="com.orderzzteam.chickenonfire.HomeActivity">
+        </activity>
+        <activity android:name="com.orderzzteam.chickenonfire.BasketActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.GetLocationActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.AddAddressActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name="com.orderzzteam.chickenonfire.RestaurantInfoActivity"
+            android:parentActivityName="com.orderzzteam.chickenonfire.HomeActivity"
+            android:launchMode="singleTop"
+            android:exported="true"
+            />
+
+        <activity android:name="com.orderzzteam.chickenonfire.CheckoutActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.SelectAddressActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.NoInternetActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.SignInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.orderzzteam.chickenonfire.SignInWithEmailActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.ForgottenPasswordActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.ReviewsActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.CreateAccountActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.FavouritesActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.AddReviewActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.LanguageActivity" />
+        <activity android:name="com.orderzzteam.chickenonfire.SelectRestaurant" />
+        <activity android:name="com.orderzzteam.chickenonfire.MyOrders"
+            android:parentActivityName="com.orderzzteam.chickenonfire.HomeActivity"/>
+        <activity android:name="com.orderzzteam.chickenonfire.MyOrderDetails"
+            android:parentActivityName="com.orderzzteam.chickenonfire.MyOrders"/>
+        <activity android:name="com.orderzzteam.chickenonfire.GeneralAreaList" />
+        <activity android:name="com.orderzzteam.chickenonfire.tools.KnetWebView" />
 
         <meta-data
             android:name="preloaded_fonts"
